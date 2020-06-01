@@ -18,7 +18,7 @@ def is_ipv4_address(dotquad):
         socket.inet_aton(dotquad)
     #        print("Valid IP address: {0}".format(dotquad))
     except socket.error:
-        raise ValueError("Invalid IP address: {0}".format(dotquad) )
+        raise ValueError("Invalid IP address: {0}".format(dotquad))
 
     return len(octets) == 4 and all(o.isdigit() and 0 <= int(o) < 256 for o in octets)
 
